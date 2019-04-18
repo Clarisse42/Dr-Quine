@@ -23,14 +23,15 @@ $(NAME_G):
 	nasm -f macho64 $(SRC_G)
 	gcc $(OBJ_G) -o $(NAME_G)
 
-# $(NAME_S): $(OBJ_S)
-# 	nasm $(FLAG) $(SRC_S) -o $(NAME_S)
+$(NAME_S): $(OBJ_S)
+	nasm -f macho64 $(SRC_S)
+	gcc $(OBJ_S) -o $(NAME_s)
 
 clean:
 	rm -rf *.o
 
 fclean: clean
-	rm -rf  $(NAME_C) $(NAME_G) $(NAME_S)
+	rm -rf  $(NAME_C) $(NAME_G) $(NAME_S) Sully_*
 
 re: fclean all
 
