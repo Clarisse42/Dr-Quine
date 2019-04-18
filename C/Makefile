@@ -28,7 +28,7 @@ clean:
 	rm -rf *.o
 
 fclean: clean
-	rm -rf  $(NAME_C) $(NAME_G) $(NAME_S)
+	rm -rf  $(NAME_C) $(NAME_G) $(NAME_S) Sully_* Grace_kid.c
 
 re: fclean all
 
